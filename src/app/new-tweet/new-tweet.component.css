@@ -1,0 +1,33 @@
+.center {
+    align-items: end;
+}
+
+/* .newText {
+ height: 100%;
+} */
+
+
+
+
+textarea {
+    /* min-height: 500px; 最小の高さを設定 */
+    overflow-y: auto;  /* テキストがテキストエリアを超える場合にスクロールバーを表示 */
+    height: 70vh; /* 親要素の高さに対する割合を指定 */
+}
+
+
+/* @media (height >= 768px) {
+    textarea {
+        min-height: 500px; 最小の高さを設定
+        overflow-y: auto;  テキストがテキストエリアを超える場合にスクロールバーを表示
+    }
+}
+
+@media (height < 768px) {
+    textarea {
+        min-height: 500px; 最小の高さを設定
+        overflow-y: auto;  テキストがテキストエリアを超える場合にスクロールバーを表示
+        height: 100%; 親要素の高さに対する割合を指定
+    }
+} */
+

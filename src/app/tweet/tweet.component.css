@@ -1,0 +1,6 @@
+.tweet {
+    /*コレ*/border-top: 1px solid #f5f5f5;
+    /* 舌もつけるなら border-bottom: 3px solid #333; */
+    padding: 4px;
+    /* background: #f2f2f2; */
+}

@@ -1,0 +1,6 @@
+<!-- TODO スクロールがうまくいかない -->
+<div class="col-12">
+    <div class="row" *ngFor="let tweet of tweets">
+        <app-tweet [tweet]="tweet" (click)="onClickTweet(tweet)"></app-tweet>
+    </div>
+</div>

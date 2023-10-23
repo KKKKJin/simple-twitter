@@ -1,0 +1,32 @@
+<div *ngIf="tweet" class="row tweet">
+    <div class="col-2">
+        <!-- ユーザーアイコン -->
+        <app-user-icon></app-user-icon>
+    </div>
+    <div class="col-10">
+        <div class="row">
+            <div class="col-9">
+                <!-- アカウント名 -->
+                {{tweet.userName}}
+            </div>
+            <div class="col-3">
+                <!-- 投稿時間 -->
+                {{tweet.time | date:'h:mm a'}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <!-- 本文 -->
+                <!-- {{tweet.text}} -->
+                <ng-container *ngFor="let line of tweet.text.split('\n')"> <!-- 1行ごとに表示させている-->
+                    {{ line }}<br>
+                </ng-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <!-- いいねボタンなど -->
+            </div>
+        </div>
+    </div>
+</div>

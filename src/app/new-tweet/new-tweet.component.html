@@ -1,0 +1,35 @@
+<!-- テンプレート駆動フォームでのチェック画面 -->
+
+<!-- アイコン -->
+
+<!-- ↓この時`onSubmit(myForm)`のmyFormはts側のプロパティとして用意しなくて良い -->
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" (keydown)="onKeydown($event, myForm)">
+    <div class="row justify-content-between center">
+        <div class="col-4">
+            <app-user-icon></app-user-icon>
+        </div>
+        <div class="col-4">
+            <button type="submit" class="btn btn-primary rounded-circle p-0" style="width:2rem;height:2rem;"
+                [disabled]="!myForm.valid">＋</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <!-- テキストエリア -->
+            <div class="my-1">
+                <textarea class="form-control" id="newText" name="newText" [(ngModel)]="newText"
+                    rows="3" placeholder="今なにしてる?" [minlength]="1" required></textarea>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div class="row">
+    <div *ngIf="myForm.valid">フォームは有効です。</div>
+    <div *ngIf="!myForm.valid">フォームは無効です。</div>
+</div>
+<!-- 上と同じ -->
+<div class="row">
+    <div>フォームは{{myForm.valid ? '有効' : '無効'}}です。</div>
+</div>
